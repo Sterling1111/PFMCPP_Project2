@@ -69,10 +69,6 @@ the 'auto' keyword. c) pass the local variables to ignoreUnused() as you did in
 // 2)
 void variableDeclarations() 
 {
-    // example:
-    int number =
-            2; // declaration of a variable named "number", that uses the primitive
-    // type 'int', and the variable's initial value is '2'
     int num1{1};
     int num2{2};
     int num3{3};
@@ -95,8 +91,6 @@ void variableDeclarations()
     ignoreUnused(num1, num2, num3, floatA, floatB, floatC, double1, double2,
                  double3, char1, char2, char3, bool1, bool2, bool3, unsigned1,
                  unsigned2, unsigned3);
-    ignoreUnused(
-            number); // passing each variable declared to the ignoreUnused() function
 }
 
 /*
