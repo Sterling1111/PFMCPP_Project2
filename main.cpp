@@ -1,6 +1,7 @@
 #include <iostream>
 
-template <typename... T> void ignoreUnused(T &&...) {}
+template <typename... T> 
+void ignoreUnused(T &&...) {}
 
 /*
 Project 2 - Part 1 / 1
@@ -66,7 +67,8 @@ the 'auto' keyword. c) pass the local variables to ignoreUnused() as you did in
  */
 
 // 2)
-void variableDeclarations() {
+void variableDeclarations() 
+{
     // example:
     int number =
             2; // declaration of a variable named "number", that uses the primitive
@@ -102,10 +104,8 @@ void variableDeclarations() {
  example:
  note: this example shows the result after completing steps 3-8
  */
-bool rentACar(
-        int rentalDuration,
-        int carType = 0) // function declaration with random number of arguments,
-// arbitrary number of arguments have default value
+// function declaration with random number of arguments, arbitrary number of arguments have default value
+bool rentACar(int rentalDuration, int carType = 0) 
 {
     ignoreUnused(rentalDuration, carType); // passing each function parameter to
     // the ignoreUnused() function
@@ -116,28 +116,32 @@ bool rentACar(
 /*
  1)
  */
-int executeInstructions(int numInstructions = 0) {
+int executeInstructions(int numInstructions = 0) 
+{
     ignoreUnused(numInstructions);
     return {};
 }
 /*
  2)
  */
-int maxElement(int elem1, int elem2, int elem3 = 5) {
+int maxElement(int elem1, int elem2, int elem3 = 5) 
+{
     ignoreUnused(elem1, elem2, elem3);
     return {};
 }
 /*
  3)
  */
-bool validColor(float red, float green, float blue, float alpha = 1.0f) {
+bool validColor(float red, float green, float blue, float alpha = 1.0f) 
+{
     ignoreUnused(red, green, blue, alpha);
     return {};
 }
 /*
  4)
  */
-bool isValid(int x, int y) {
+bool isValid(int x, int y) 
+{
     ignoreUnused(x, y);
     return {};
 }
@@ -145,12 +149,16 @@ bool isValid(int x, int y) {
 /*
  5) void functions should have side effects or they do nothing.
  */
-void wasteTime(unsigned milliseconds) { ignoreUnused(milliseconds); }
+void wasteTime(unsigned milliseconds) 
+{ 
+    ignoreUnused(milliseconds);
+}
 
 /*
  6)
  */
-char convertToUppercase(char letter = 'a') {
+char convertToUppercase(char letter = 'a') 
+{
     ignoreUnused(letter);
     return {};
 }
@@ -158,7 +166,8 @@ char convertToUppercase(char letter = 'a') {
 /*
  7)
  */
-bool greater(int a, int b) {
+bool greater(int a, int b) 
+{
     ignoreUnused(a, b);
     return {};
 }
@@ -166,19 +175,24 @@ bool greater(int a, int b) {
 /*
  8)
  */
-void movePlayer(int xOffset = 0, int yOffset = 0) {
+void movePlayer(int xOffset = 0, int yOffset = 0) 
+{
     ignoreUnused(xOffset, yOffset);
 }
 
 /*
  9)
  */
-void appendToSomeList(int elem = 0) { ignoreUnused(elem); }
+void appendToSomeList(int elem = 0) 
+{ 
+    ignoreUnused(elem); 
+}
 
 /*
  10)
  */
-double addFive(double a = 0.0) {
+double addFive(double a = 0.0) 
+{
     ignoreUnused(a);
     return {};
 }
